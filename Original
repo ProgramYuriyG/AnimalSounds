@@ -1,0 +1,72 @@
+
+import java.util.Scanner;
+public class Animal{
+//sets a private string for sound
+private String sound;
+
+//Gets the sound thats made, takes the getSound method from the Sounds class
+public String getSound(){
+return sound;
+}
+//Sets the sound
+public void setSound(String sound){
+this.sound=sound;
+}}
+
+//Sounds Class
+class Sounds{
+public static void main (String[]args){
+Scanner input = new Scanner (System.in);
+
+//asks user what animal they are
+System.out.println("What animal are you?");
+String animal =input.next();
+animal = animal.toLowerCase();
+
+//Switch for animal
+switch(animal){
+//dog
+case("dog"):
+Animal dog = new Animal();
+dog.setSound("\nWoof");
+System.out.println(dog.getSound());
+break;
+//cat
+case("cat"):
+Animal cat = new Animal();
+cat.setSound("\nMeow");
+System.out.println(cat.getSound());
+break;
+//fish
+case("fish"):
+Animal fish = new Animal();
+fish.setSound("\nGlub");
+System.out.println(fish.getSound());
+break;
+//wolf
+case("wolf"):
+Animal wolf = new Animal();
+wolf.setSound("\nHawoo");
+System.out.println(wolf.getSound());
+break;
+//pig
+case("pig"):
+Animal pig = new Animal();
+pig.setSound("\nOink");
+System.out.println(pig.getSound());
+break;
+//cow
+case("cow"):
+Animal cow = new Animal();
+cow.setSound("\nMoo");
+System.out.println(cow.getSound());
+break;
+//If none of the above
+default:
+Animal abnormal =new Animal();
+abnormal.setSound("\nrawr");
+System.out.println(abnormal.getSound());
+break;
+}
+
+}}
